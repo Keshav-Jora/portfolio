@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Keshav Jora | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #e8f5e9, #f4f6f8);
+        color: #1f2933;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      /* Header */
+      header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      header h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        background: linear-gradient(90deg, #2e7d32, #43a047);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      header p {
+        font-size: 16px;
+        color: #4b5563;
+        margin: 0;
+      }
+
+      /* Card */
+      .card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        padding: 32px;
+        margin-bottom: 28px;
+        border-radius: 18px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+      }
+
+      .card h2 {
+        margin-top: 0;
+        margin-bottom: 14px;
+        font-size: 22px;
+        color: #111827;
+        position: relative;
+      }
+
+      .card h2::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #4caf50;
+        margin-top: 6px;
+        border-radius: 2px;
+      }
+
+      .card p {
+        line-height: 1.7;
+        color: #374151;
+        font-size: 15px;
+      }
+
+      /* Skills */
+      .skills {
+        margin-top: 14px;
+      }
+
+      .skills span {
+        display: inline-block;
+        background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+        color: #1b5e20;
+        padding: 10px 16px;
+        margin: 8px 8px 0 0;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 30px;
+        }
+
+        .card {
+          padding: 22px;
+        }
+
+        .skills span {
+          padding: 8px 14px;
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Keshav Jora</h1>
+        <p>BTech CSE Student | Aspiring Web Developer</p>
+      </header>
+
+      <section class="card">
+        <h2>About Me</h2>
+        <p>
+          I am a Computer Science and Engineering student currently learning
+          programming and web development. As a beginner, my focus is on
+          building strong fundamentals, understanding core concepts, and
+          improving my problem-solving skills through consistent practice.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Skills (Learning)</h2>
+        <div class="skills">
+          <span>C / C++</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript (Beginner)</span>
+          <span>DSA (Learning)</span>
+          <span>Git & GitHub</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Learning Journey</h2>
+        <p>
+          Currently learning web development and data structures. I practice
+          coding regularly, revise concepts, and plan to build beginner-level
+          projects as I progress.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Education</h2>
+        <p>
+          <strong>B.Tech in Computer Science & Engineering</strong><br />
+          ICFAI University, Jaipur
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Contact</h2>
+        <p>Email: kesujora01@gmail.com</p>
+        <p>GitHub: https://github.com/yourusername</p>
+        <p>LinkedIn: https://www.linkedin.com/in/keshav-j-ab6bb1375</p>
+      </section>
+
+      <footer>© 2025 Keshav Jora • Learning • Building • Growing</footer>
+    </div>
+  </body>
+</html>
