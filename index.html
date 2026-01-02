@@ -23,7 +23,6 @@
         margin: auto;
       }
 
-      /* Header */
       header {
         text-align: center;
         margin-bottom: 60px;
@@ -43,20 +42,12 @@
         margin: 0;
       }
 
-      /* Card */
       .card {
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.9);
         padding: 32px;
         margin-bottom: 28px;
         border-radius: 18px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
       }
 
       .card h2 {
@@ -64,28 +55,12 @@
         margin-bottom: 14px;
         font-size: 22px;
         color: #111827;
-        position: relative;
-      }
-
-      .card h2::after {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 3px;
-        background: #4caf50;
-        margin-top: 6px;
-        border-radius: 2px;
       }
 
       .card p {
         line-height: 1.7;
         color: #374151;
         font-size: 15px;
-      }
-
-      /* Skills */
-      .skills {
-        margin-top: 14px;
       }
 
       .skills span {
@@ -99,7 +74,15 @@
         font-weight: 500;
       }
 
-      /* Footer */
+      a {
+        color: #2e7d32;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
       footer {
         text-align: center;
         margin-top: 50px;
@@ -107,7 +90,6 @@
         color: #6b7280;
       }
 
-      /* Mobile Responsive */
       @media (max-width: 768px) {
         header h1 {
           font-size: 30px;
@@ -171,18 +153,36 @@
         </p>
       </section>
 
+      <!-- CERTIFICATION (CORRECTLY ADDED) -->
+      <section class="card">
+        <h2>Certifications</h2>
+        <p>
+          <strong>Generative AI & ChatGPT 101</strong><br />
+          Simplilearn — Fundamentals level
+        </p>
+      </section>
+
       <section class="card">
         <h2>Contact</h2>
         <p>Email: kesujora01@gmail.com</p>
-        <p>GitHub: https://github.com/keshav-jora</p>
-        <p>LinkedIn: https://www.linkedin.com/in/keshav-j-ab6bb1375</p>
+        <p>
+          GitHub:
+          <a href="https://github.com/keshav-jora" target="_blank">
+            https://github.com/keshav-jora
+          </a>
+        </p>
+        <p>
+          LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/keshav-j-ab6bb1375"
+            target="_blank"
+          >
+            https://www.linkedin.com/in/keshav-j-ab6bb1375
+          </a>
+        </p>
       </section>
 
       <footer>© 2025 Keshav Jora • Learning • Building • Growing</footer>
     </div>
   </body>
 </html>
-
-
-
-
