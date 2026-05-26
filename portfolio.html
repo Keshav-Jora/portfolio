@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Keshav Jora | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    :root{
+      --bg:#f5f7fa;
+      --bg-alt:#eceff4;
+      --white:#ffffff;
+      --text:#1a1f36;
+      --text-muted:#5c6578;
+      --accent:#4f46e5;
+      --accent-light:#6366f1;
+      --accent-dark:#4338ca;
+      --accent-soft:#e0e7ff;
+      --highlight:#0ea5e9;
+      --border:#dde3ec;
+      --shadow:0 10px 40px rgba(26,31,54,0.07);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Poppins",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    section{
+      padding:80px 0;
+    }
+
+    section:not(.hero):nth-of-type(even){
+      background:var(--bg-alt);
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:36px;
+      margin-bottom:50px;
+      font-weight:700;
+      color:var(--text);
+    }
+
+    .section-title span{
+      color:var(--accent);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+      position:relative;
+      background:
+      radial-gradient(circle at 15% 20%,#e0e7ff 0%,transparent 42%),
+      radial-gradient(circle at 85% 75%,#dbeafe 0%,transparent 38%),
+      linear-gradient(160deg,#ffffff 0%,#f5f7fa 55%,#eef2ff 100%);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+    }
+
+    .hero h1{
+      font-size:64px;
+      font-weight:800;
+      margin-bottom:12px;
+      background:linear-gradient(120deg,var(--accent-dark),var(--accent-light),var(--highlight));
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero h2{
+      font-size:22px;
+      color:var(--text-muted);
+      font-weight:500;
+      margin-bottom:18px;
+      line-height:1.6;
+    }
+
+    .hero p{
+      max-width:720px;
+      margin:auto;
+      line-height:1.8;
+      color:var(--text-muted);
+      font-size:15px;
+    }
+
+    /* BUTTONS */
+
+    .buttons{
+      margin-top:32px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+
+    .btn{
+      padding:13px 24px;
+      border-radius:10px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+      cursor:pointer;
+      position:relative;
+      z-index:2;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent-light));
+      color:white;
+      box-shadow:0 6px 20px rgba(79,70,229,0.35);
+    }
+
+    .btn-primary:hover{
+      background:linear-gradient(135deg,var(--accent-dark),var(--accent));
+      transform:translateY(-4px);
+    }
+
+    .btn-secondary{
+      border:2px solid var(--border);
+      background:var(--white);
+      color:var(--text);
+    }
+
+    .btn-secondary:hover{
+      border-color:var(--accent);
+      color:var(--accent);
+      transform:translateY(-4px);
+    }
+
+    /* CARD */
+
+    .card{
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:28px;
+      transition:0.3s;
+      box-shadow:var(--shadow);
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:var(--accent-soft);
+      box-shadow:0 16px 48px rgba(79,70,229,0.12);
+    }
+
+    /* ABOUT */
+
+    .about-text{
+      line-height:1.9;
+      color:var(--text-muted);
+      font-size:15px;
+    }
+
+    /* SKILLS */
+
+    .skills-grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      justify-content:center;
+    }
+
+    .skill{
+      background:var(--white);
+      padding:12px 18px;
+      border-radius:10px;
+      font-size:14px;
+      transition:0.3s;
+      border:1px solid var(--border);
+      color:var(--text);
+      box-shadow:0 2px 10px rgba(26,31,54,0.05);
+    }
+
+    .skill:hover{
+      border-color:var(--accent);
+      color:var(--accent-dark);
+      transform:translateY(-3px);
+    }
+
+    /* PROJECTS */
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:24px;
+    }
+
+    .project-card h3{
+      font-size:22px;
+      margin-bottom:14px;
+      color:var(--text);
+    }
+
+    .project-card p{
+      line-height:1.8;
+      color:var(--text-muted);
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .tech-stack{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:20px;
+    }
+
+    .tech{
+      background:var(--accent-soft);
+      border:1px solid #c7d2fe;
+      color:var(--accent-dark);
+      padding:7px 12px;
+      border-radius:8px;
+      font-size:12px;
+      font-weight:500;
+    }
+
+    .preview-image{
+      width:100%;
+      border-radius:12px;
+      margin-bottom:18px;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
+    .featured-project{
+      grid-column:1 / -1;
+    }
+
+    .project-badge{
+      display:inline-block;
+      background:var(--accent-soft);
+      color:var(--accent-dark);
+      font-size:12px;
+      font-weight:600;
+      padding:6px 12px;
+      border-radius:999px;
+      margin-bottom:14px;
+      border:1px solid #c7d2fe;
+    }
+
+    .project-subtitle{
+      color:var(--highlight);
+      font-size:14px;
+      font-weight:600;
+      margin-bottom:12px;
+    }
+
+    .feature-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:10px;
+      margin-bottom:20px;
+    }
+
+    .feature-item{
+      background:var(--bg-alt);
+      border:1px solid var(--border);
+      padding:10px 14px;
+      border-radius:8px;
+      font-size:13px;
+      color:var(--text-muted);
+    }
+
+    .feature-item strong{
+      color:var(--accent);
+      display:block;
+      margin-bottom:4px;
+      font-size:12px;
+    }
+
+    /* EXPERIENCE */
+
+    .timeline{
+      display:grid;
+      gap:22px;
+    }
+
+    .timeline h3{
+      margin-bottom:10px;
+      color:var(--text);
+    }
+
+    .timeline p{
+      color:var(--text-muted);
+      line-height:1.8;
+      font-size:14px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .contact-card{
+      text-align:center;
+      display:block;
+      transition:0.3s;
+    }
+
+    .contact-card:hover{
+      border-color:var(--accent);
+    }
+
+    .contact-card h3{
+      margin-bottom:10px;
+      color:var(--text);
+    }
+
+    .contact-card p{
+      color:var(--accent);
+      font-size:14px;
+      font-weight:500;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:28px 20px;
+      border-top:1px solid var(--border);
+      background:var(--white);
+      color:var(--text-muted);
+      font-size:14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero h2{
+        font-size:18px;
+      }
+
+      .section-title{
+        font-size:30px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Keshav Jora</h1>
+
+      <h2>
+        B.Tech CSE Student | Frontend Development • DSA • Creative Work
+      </h2>
+
+      <p>
+        Building frontend projects, improving problem-solving skills through DSA,
+        and exploring practical development through projects, hackathons, and hands-on learning.
+      </p>
+
+      <div class="buttons">
+
+        <a href="https://www.linkedin.com/in/keshav-j-ab6bb1375"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary">
+          LinkedIn
+        </a>
+
+        <a href="https://github.com/keshav-jora"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary">
+          GitHub
+        </a>
+
+        <a href="mailto:kesujora01@gmail.com"
+          class="btn btn-secondary">
+          Email
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        About <span>Me</span>
+      </h2>
+
+      <div class="card about-text">
+
+        <p>
+          Hi, I'm Keshav Jora, a B.Tech Computer Science student at ICFAI University, Jaipur.
+        </p>
+
+        <br>
+
+        <p>
+          Currently, I'm focused on frontend development, DSA, and practical problem solving through projects and hackathons.
+        </p>
+
+        <br>
+
+        <p>
+          Alongside development, I also explore creative work such as thumbnails, poster design,
+          and student resume building using modern tools.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        My <span>Skills</span>
+      </h2>
+
+      <div class="skills-grid">
+
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">C / C++</div>
+        <div class="skill">Python</div>
+        <div class="skill">DSA</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Canva</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Featured <span>Projects</span>
+      </h2>
+
+      <div class="projects-grid">
+
+        <div class="card project-card featured-project">
+
+          <span class="project-badge">Greenovation 3.0 Hackathon</span>
+
+          <h3>Smart Waste Impact Analyzer</h3>
+
+          <p class="project-subtitle">EcoCalc — React sustainability web app</p>
+
+          <p>
+            Built a full-stack-style frontend app for waste impact analysis using lifecycle emission factors.
+            Includes tabbed navigation, animated UI, local waste logging, AI scanner autofill to calculator,
+            green score tracking, and sustainability reports — presented at Greenovation 3.0.
+          </p>
+
+          <div class="feature-list">
+
+            <div class="feature-item">
+              <strong>Impact Calculator</strong>
+              Carbon estimates from waste type &amp; quantity
+            </div>
+
+            <div class="feature-item">
+              <strong>Waste Log</strong>
+              Save entries with localStorage persistence
+            </div>
+
+            <div class="feature-item">
+              <strong>AI Scanner</strong>
+              Scan waste &amp; autofill calculator tab
+            </div>
+
+            <div class="feature-item">
+              <strong>Scrap Dealers</strong>
+              Find nearby recycling &amp; scrap options
+            </div>
+
+            <div class="feature-item">
+              <strong>Report Card</strong>
+              Visual summary of your waste impact
+            </div>
+
+            <div class="feature-item">
+              <strong>City Compare</strong>
+              Compare your stats with city averages
+            </div>
+
+            <div class="feature-item">
+              <strong>Green Score</strong>
+              Track sustainability progress over time
+            </div>
+
+            <div class="feature-item">
+              <strong>Compost Guide</strong>
+              Step-by-step home composting help
+            </div>
+
+          </div>
+
+          <div class="tech-stack">
+
+            <div class="tech">React</div>
+            <div class="tech">Framer Motion</div>
+            <div class="tech">Lucide React</div>
+            <div class="tech">Tailwind CSS</div>
+            <div class="tech">localStorage</div>
+            <div class="tech">JavaScript</div>
+
+          </div>
+
+          <div class="buttons">
+
+            <a href="#"
+              class="btn btn-primary">
+              Live Demo
+            </a>
+
+            <a href="https://github.com/keshav-jora"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="card project-card">
+
+          <h3>Student Resume Building Work</h3>
+
+          <p>
+            Worked on creating clean and ATS-friendly resumes for students using Canva
+            and modern resume structure concepts focused on professional presentation.
+          </p>
+
+          <div class="tech-stack">
+
+            <div class="tech">Canva</div>
+            <div class="tech">Resume Design</div>
+            <div class="tech">Creative Work</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PORTFOLIO WORK -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Portfolio <span>Work</span>
+      </h2>
+
+      <div class="card project-card">
+
+        <p>
+          Sample frontend portfolio design focused on clean UI structure,
+          modern layout, and responsive presentation.
+        </p>
+
+        <div class="buttons">
+
+          <a href="https://keshav-jora.github.io/portfolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary">
+            View My Portfolio
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- RESUME WORK -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Resume <span>Work</span>
+      </h2>
+
+      <div class="card project-card">
+
+        <img src="resume_11.png"
+          alt="Resume redesign sample"
+          class="preview-image">
+
+        <p>
+          Resume redesign work focused on improving readability,
+          ATS-friendly structure, layout hierarchy, and modern presentation.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MY RESUME -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        My <span>Resume</span>
+      </h2>
+
+      <div class="card project-card">
+
+        <img src="resume_52.png"
+          alt="Keshav Jora Resume"
+          class="preview-image">
+
+        <div class="buttons">
+
+          <a href="resume_52.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary">
+            View Resume
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Experience & <span>Activities</span>
+      </h2>
+
+      <div class="timeline">
+
+        <div class="card">
+
+          <h3>Full Stack Development Intern — Decode Labs</h3>
+
+          <p>
+            Exploring frontend workflow, modern web technologies,
+            and project-based learning through internship exposure.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Greenovation 3.0 — Smart Waste Impact Analyzer</h3>
+
+          <p>
+            Built and presented EcoCalc, a React web app with impact calculator, AI waste scanner,
+            waste log, green score, city comparison, and compost guide — using lifecycle emission factors
+            for real-world sustainability insights.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Education
+      </h2>
+
+      <div class="card">
+
+        <h3>B.Tech in Computer Science & Engineering</h3>
+
+        <p>
+          ICFAI University, Jaipur
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Let's <span>Connect</span>
+      </h2>
+
+      <div class="contact-grid">
+
+        <a href="mailto:kesujora01@gmail.com"
+          class="card contact-card">
+
+          <h3>Email</h3>
+
+          <p>
+            kesujora01@gmail.com
+          </p>
+
+        </a>
+
+        <a href="https://github.com/keshav-jora"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card contact-card">
+
+          <h3>GitHub</h3>
+
+          <p>
+            github.com/keshav-jora
+          </p>
+
+        </a>
+
+        <a href="https://www.linkedin.com/in/keshav-j-ab6bb1375"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card contact-card">
+
+          <h3>LinkedIn</h3>
+
+          <p>
+            linkedin.com/in/keshav-j-ab6bb1375
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Keshav Jora • Frontend • DSA • Creative Work
+  </footer>
+
+</body>
+
+</html>
