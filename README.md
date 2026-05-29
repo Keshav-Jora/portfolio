@@ -1,19 +1,34 @@
 # Keshav Jora — Portfolio
 
-Live: `https://keshav-jora.github.io/portfolio/`
+Personal portfolio website showcasing my projects, skills, and learning journey as a B.Tech CSE student.
 
-## What’s inside
-- `portfolio.html`: Source file (edit this in Cursor)
-- `index.html`: The file GitHub Pages uses (same content as `portfolio.html`)
-- `resume_11.png`: Resume redesign sample
-- `resume_52.png`: My resume
+**Live site:** [https://keshav-jora.github.io/portfolio/](https://keshav-jora.github.io/portfolio/)
 
-## Update the live website (GitHub, online)
-1. Open your repo: `https://github.com/Keshav-Jora/portfolio`
-2. Open `index.html` → click **Edit (pencil)**
-3. Copy all code from your local `portfolio.html` and paste it into `index.html`
-4. Click **Commit changes**
-5. Refresh after 1–2 minutes: `https://keshav-jora.github.io/portfolio/`
+## Tech stack
 
-## Notes
-- If you don’t have a live demo link for a project, it’s better to remove the button (done).
+- HTML5
+- CSS3
+- Responsive layout
+
+## Repository files
+
+| File | Description |
+|------|-------------|
+| `index.html` | Main portfolio page (GitHub Pages) |
+| `resume-design-sample.png` | Resume redesign sample |
+| `keshav-jora-resume.png` | My resume preview |
+
+## Featured highlights
+
+- Smart Waste Impact Analyzer (EcoCalc) — Greenovation 3.0
+- Frontend development & DSA
+- Resume design samples
+
+## Connect
+
+- **LinkedIn:** [linkedin.com/in/keshav-j-ab6bb1375](https://www.linkedin.com/in/keshav-j-ab6bb1375)
+- **GitHub:** [github.com/keshav-jora](https://github.com/keshav-jora)
+
+---
+
+© 2026 Keshav Jora
