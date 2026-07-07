@@ -171,13 +171,13 @@ var DATA = {
 })();
 
 // Gallery switcher
-function switchScreen(thumb, label){
+function switchScreen(thumb, label, src){
   document.querySelectorAll(".gallery-thumb").forEach(function(t){ t.classList.remove("active"); });
   thumb.classList.add("active");
   var img=document.getElementById("gallery-active-img");
   img.style.opacity="0";
-  setTimeout(function(){ img.style.opacity="1"; }, 320);
-  document.getElementById("gallery-url").textContent="career-os-lite.vercel.app — "+label;
+  setTimeout(function(){ img.src=src; img.style.opacity="1"; }, 320);
+  document.getElementById("gallery-url").textContent="career-os-lite.vercel.app \u2014 "+label;
 }
 
 // Contact form — opens mailto
