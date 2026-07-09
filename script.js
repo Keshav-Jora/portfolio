@@ -44,7 +44,7 @@ var DATA = {
     { icon:"&#128025;",label:"GitHub",    href:"https://github.com/keshav-jora",                 display:"github.com/keshav-jora" },
     { icon:"&#128188;",label:"LinkedIn",  href:"https://www.linkedin.com/in/keshav-j-ab6bb1375", display:"linkedin.com/in/keshav-j" },
     { icon:"&#127760;",label:"Portfolio", href:"https://keshav-jora.github.io/portfolio/",       display:"keshav-jora.github.io" },
-    { icon:"&#128196;",label:"Resume",    href:"https://keshav-jora.github.io/portfolio/keshav-jora-resume.png", display:"Download Resume (PNG)" }
+    { icon:"&#128196;",label:"Resume",    href:"https://keshav-jora.github.io/portfolio/keshav-jora-resume.png?v=3", display:"Download Resume (PNG)" }
   ]
 
 };
