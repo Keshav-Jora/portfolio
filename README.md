@@ -138,6 +138,7 @@ A web app for analysing environmental impact of waste using real lifecycle emiss
 This project is open source under the [MIT License](LICENSE).  
 You are free to use the code structure as a reference — please do not copy personal content (photos, bio, project descriptions) without permission.
 
+
 ---
 
 *Built with HTML, CSS & JS · Portfolio V2 · © 2026 Keshav Jora*
